@@ -6,6 +6,38 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Firebase Setup
+
+To use Firebase in this project, follow these steps:
+
+1. **Add Firebase Configuration**:
+   - In your `src/environments/` directory, open the `environment.ts` file.
+   - Add your Firebase configuration details as follows:
+
+     ```typescript
+     export const environment = {
+       production: false,
+       firebase: {
+         apiKey: "YOUR_API_KEY",
+         authDomain: "YOUR_AUTH_DOMAIN",
+         projectId: "YOUR_PROJECT_ID",
+         storageBucket: "YOUR_STORAGE_BUCKET",
+         messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+         appId: "YOUR_APP_ID",
+         measurementId: "YOUR_MEASUREMENT_ID"
+       }
+     };
+     ```
+
+   Replace the placeholder values with your actual Firebase project configuration.
+
+2. **Install Dependencies**:
+   - Run the following command to install the necessary dependencies, using the `--force` flag to ensure that all packages are installed:
+
+     ```bash
+     npm i --force
+     ```
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
