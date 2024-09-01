@@ -1,0 +1,23 @@
+<div class="main">
+    <div class="nav">
+        <button routerLink="/v1/create-room">+ New Room</button>
+        <h1>Join or Manage Your Rooms</h1>
+        <button (click)="Logout()">Logout</button>
+    </div>
+    <div class="card-container" *ngIf="!showList">
+        <div *ngFor="let room of chatRooms" class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ room.name }}</h5>
+                <p class="card-text">{{ room.description }}</p>
+            </div>
+            <div class="card-footer">
+                <button [routerLink]="['/v1/chat-room',room.id]">Join Room</button>
+                <button (click)="deleteRoom(room.id,room.createdBy)">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="no-data" *ngIf="showList">
+        <h1>Your Roomlist Is Lonely!!!</h1>
+        <h2>Create A New Room and Add Your Friends</h2>
+    </div>
+</div>

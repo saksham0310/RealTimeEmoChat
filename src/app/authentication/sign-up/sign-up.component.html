@@ -1,0 +1,14 @@
+<div class="main">
+    <h2 class="app-title">RealTimeChatEmo</h2>
+    <div class="container">
+        <h1>Sign-up Here</h1>
+        <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+            <div class="detail-section">
+                <input formControlName="email" placeholder="Input email" type="email">
+                <input formControlName="password" placeholder="Input password">
+            </div>
+            <button type="submit" [disabled]="signUpForm.invalid">Sign-up</button>
+        </form>
+        <div class="link-button" routerLink="/auth/login">Already Sign-up?</div>
+    </div>
+</div>

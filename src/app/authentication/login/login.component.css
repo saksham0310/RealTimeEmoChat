@@ -1,0 +1,132 @@
+/* General styling for the main container */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Application name title */
+.app-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #00e676;
+    text-shadow: 0 4px 8px rgba(0, 230, 118, 0.5);
+    text-align: center;
+}
+
+/* Container styling */
+.container {
+    background-color: #272727;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Form title */
+.container h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #00bcd4;
+    text-shadow: 0 4px 8px rgba(0, 188, 212, 0.5);
+}
+
+/* Text input section */
+.text-input-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Input fields */
+.text-input-section input {
+    width: 100%;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.text-input-section input:focus {
+    border-color: #00bcd4;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+}
+
+/* Password toggle button */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 80%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: #00bcd4;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.toggle-password:hover {
+    color: #008ba3;
+}
+
+/* Login button */
+.container button[type="submit"] {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #00bcd4;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 188, 212, 0.2);
+    width: 100%;
+}
+
+.container button[type="submit"]:hover {
+    background-color: #008ba3;
+    transform: scale(1.05);
+}
+
+.container button[type="submit"]:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Reset password and sign-up links */
+.reset-button, .link-button {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ff4081;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.reset-button:hover, .link-button:hover {
+    color: #c60055;
+}
+
+/* Placeholder text styling */
+.text-input-section input::placeholder {
+    color: #999;
+    font-style: italic;
+}

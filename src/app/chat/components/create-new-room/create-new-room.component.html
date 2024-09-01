@@ -1,0 +1,9 @@
+<div class="main">
+    <h1>Create a new room here</h1>
+    <form [formGroup]="roomForm" (submit)="CreateRoom()">
+        <input formControlName="name" placeholder="Enter Room Name">
+        <input formControlName="description" placeholder="Enter description">
+        <input formControlName="email" placeholder="Enter member Email and seperate by ',' ">
+        <button type="submit" [disabled]="roomForm.invalid">Create Room now</button>
+    </form>
+</div>

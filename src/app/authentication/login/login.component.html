@@ -1,0 +1,16 @@
+<div class="main">
+  <h2 class="app-title">RealTimeChatEmo</h2>
+  <div class="container">
+    <h1>Login Here</h1>
+    <form [formGroup]="loginPage" (ngSubmit)="submit()">
+      <div class="text-input-section">
+        <input formControlName="email" placeholder="Enter your email" type="email">
+        <input formControlName="password" placeholder="Enter your password" [type]="passwordType">
+        <button type="button" class="toggle-password"  (click)="togglePasswordVisibility()">{{passwordType==='password'?'show':'hide'}}</button>
+      </div>
+      <button type="submit" [disabled]="loginPage.invalid">Login</button>
+    </form>
+    <div class="reset-button" routerLink="/auth/reset-password">Forgot password?</div>
+    <div class="link-button" routerLink="/auth/sign-up">Sign-up Here</div>
+  </div>
+</div>
